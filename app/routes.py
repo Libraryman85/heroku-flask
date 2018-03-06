@@ -3,8 +3,7 @@ from flask import render_template
 from app import app
 
 
-@app.route('/')
-@app.route('/index')
+@app.route('/index1')
 def index1():
     user = {'username': 'Alex'}
     return '''
@@ -20,5 +19,5 @@ def index1():
 @app.route('/')
 @app.route('/index')
 def index():
-    user = {'username': 'Miguel'}
+    user = {'username': 'Alex'}
     return render_template('index.html', title='Home', user=user)
