@@ -17,7 +17,8 @@ setup(
         'gunicorn',
         'bandit',
         'coverage',
-        'coveralls'
+        'coveralls',
+        'flask-wtf'
     ],
     classifiers=[
         'Environment :: Console',
