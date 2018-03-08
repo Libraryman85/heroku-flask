@@ -1,12 +1,10 @@
-from flask import render_template
-
+ffrom flask import render_template
 from app import app
 
-
-@app.route('/index1')
-def index1():
-    user = {'username': 'Alex'}
-
+@app.route('/')
+@app.route('/index')
+def index():
+    user = {'username': 'Miguel'}
     posts = [
         {
             'author': {'username': 'John'},
@@ -18,10 +16,3 @@ def index1():
         }
     ]
     return render_template('index.html', title='Home', user=user, posts=posts)
-
-
-@app.route('/')
-@app.route('/index')
-def index():
-    user = {'username': 'Alex'}
-    return render_template('index.html', title='Dashboard', adventurer=adventurer, games=games)
